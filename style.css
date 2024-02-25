@@ -18,7 +18,7 @@ html {
   --p-text: #000000;
   --s-text: #ffffff;
   --bg-logo: #ffffff;
-  --mobile-txt: 1.4rem;
+  --mobile-txt: 1.6rem;
   --mobile-txt2: 1.4rem;
   --mobile-h1: 3.4rem;
   --mobile-h2: 3.4rem;
@@ -35,7 +35,7 @@ a {
 }
 
 a:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 i {
@@ -79,6 +79,17 @@ header {
   justify-content: center;
   background-color: var(--secondary-color);
   gap: 1rem;
+}
+header #desktop-menu {
+  display: none;
+}
+header #mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #mobile-menu button {
+  background-color: transparent;
 }
 header img {
   width: 15%;
@@ -151,23 +162,64 @@ header nav ul a {
 #associations .text ul li i {
   font-size: var(--mobile-txt);
 }
+#associations .text ul li p.text {
+  padding-left: 3%;
+  padding-right: 0%;
+}
 #associations .text ul li .p-color {
   color: var(--primary-color);
 }
 
+#projects .filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+#projects .filter .opt {
+  padding: 10px 5px;
+  background-color: transparent;
+  border: 5px solid var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#projects .filter .opt.selected {
+  border: 5px solid var(--secondary-color);
+  background-color: var(--secondary-color);
+}
+#projects .cards {
+  width: auto;
+  display: flex;
+  white-space: none;
+  overflow: hidden;
+  overflow-x: auto;
+  gap: 10px;
+}
 #projects .cards .card {
   width: 100%;
+  min-width: 310px;
   display: flex;
   align-items: center;
   position: relative;
   flex-direction: column;
 }
 #projects .cards .card .status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
   background-color: var(--primary-color);
   color: var(--s-text);
+  padding: 1rem;
+}
+#projects .cards .card .status i {
+  font-size: 3rem;
+}
+#projects .cards .card .status p {
+  font-size: 1.4rem;
 }
 #projects .cards .card img {
   width: 100%;
@@ -190,6 +242,26 @@ header nav ul a {
   border-radius: 10px;
   font-size: var(--mobile-txt);
   color: var(--s-text);
+}
+#projects .navegation-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#projects .navegation-project .projects-opts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+#projects .navegation-project .projects-opts .options {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+}
+#projects .navegation-project .projects-opts .options.selected {
+  background-color: var(--primary-color);
 }
 
 #ONU .cards {
