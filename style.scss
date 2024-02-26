@@ -107,7 +107,6 @@ header {
       background-color: transparent;
     }
   }
-
   img {
     width: 25%;
     background-color: var(--bg-logo);
@@ -125,9 +124,12 @@ header {
       font-family: "Roboto";
       display: flex;
       justify-content: space-between;
-      a {
-        font-size: var(--desktop-h2);
-        font-weight: bold;
+      li {
+        display: flex;
+        a {
+          font-size: var(--desktop-h2);
+          font-weight: bold;
+        }
       }
     }
   }
@@ -177,17 +179,17 @@ header {
       text-transform: uppercase;
     }
   }
-  #btns-news{
+  #btns-news {
     display: flex;
     align-items: center;
     justify-content: center;
-    .btn{
+    .btn {
       width: 15px;
       height: 15px;
       border: 1px solid var(--s-text);
       background-color: var(--secondary-color);
       border-radius: 50%;
-      &.btn-selected{
+      &.btn-selected {
         background-color: var(--primary-color);
       }
     }
@@ -216,7 +218,6 @@ header {
   }
 }
 #associations {
-  padding: 2rem 0;
   img {
     width: 100%;
   }
@@ -309,7 +310,7 @@ header {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          p{
+          p {
             font-size: var(--mobile-txt);
           }
         }
@@ -405,7 +406,7 @@ footer {
             border-radius: 50%;
             background-color: var(--p-text);
           }
-          a{
+          a {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -452,8 +453,6 @@ footer {
     text-align: center;
   }
 }
-@media screen and (min-width: 768px) {
-}
 #associations {
   .bi-geo-alt-fill {
     color: var(--primary-color);
@@ -461,6 +460,111 @@ footer {
 }
 .logo {
   width: 70%;
+  max-width: 228px;
   background-color: var(--bg-logo);
   border-radius: 50%;
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+  h2 {
+    text-align: start;
+  }
+  h3{
+    font-size: var(--desktop-h3) !important;
+  }
+  .header h2, .contact a{
+   font-size: var(--desktop-h2);
+  }
+  .device-padding {
+    padding: 2% 10%;
+  }
+  header {
+    padding: 1vh 10vw;
+    i.line {
+      width: 1px;
+      height: 100%;
+      background-color: #000000;
+    }
+    #mobile-menu {
+      display: none !important;
+    }
+    #desktop-menu {
+      display: flex !important;
+      justify-content: center;
+      gap: 2%;
+      a {
+        text-transform: uppercase;
+        font-size: var(--desktop-h3);
+      }
+    }
+  }
+  #sobre {
+    padding: 4rem 10%;
+    .content {
+      flex-direction: row;
+      gap: 4%;
+      img {
+        border: none;
+        border-right: 5px solid var(--primary-color);
+      }
+      .text p, .text h3{
+        text-align: justify;
+      }
+    }
+  }
+  #associations {
+    .display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 30%;
+      }
+      .text {
+        padding: 0% 2%;
+        display: flex;
+      }
+    }
+  }
+  #projects {
+    .filter {
+      justify-content: start;
+      gap: 2rem;
+    }
+  }
+  #ONU {
+    .cards {
+      justify-content: space-between;
+    }
+  }
+  .contact{
+    padding: 5%;
+  }
+  footer {
+    .flex {
+      flex-direction: row;
+      gap: 20px;
+      .logo {
+        width: 30%;
+      }
+      #footer-content {
+        align-items: start;
+        flex-direction: row;
+        h2 {
+          text-align: start;
+        }
+        #footer-contact {
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            li {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

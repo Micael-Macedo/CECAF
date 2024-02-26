@@ -139,7 +139,10 @@ header nav ul {
   display: flex;
   justify-content: space-between;
 }
-header nav ul a {
+header nav ul li {
+  display: flex;
+}
+header nav ul li a {
   font-size: var(--desktop-h2);
   font-weight: bold;
 }
@@ -229,9 +232,6 @@ header nav ul a {
   text-align: center;
 }
 
-#associations {
-  padding: 2rem 0;
-}
 #associations img {
   width: 100%;
 }
@@ -464,6 +464,100 @@ footer .copyright {
 
 .logo {
   width: 70%;
+  max-width: 228px;
   background-color: var(--bg-logo);
   border-radius: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+  h2 {
+    text-align: start;
+  }
+  h3 {
+    font-size: var(--desktop-h3) !important;
+  }
+  .header h2, .contact a {
+    font-size: var(--desktop-h2);
+  }
+  .device-padding {
+    padding: 2% 10%;
+  }
+  header {
+    padding: 1vh 10vw;
+  }
+  header i.line {
+    width: 1px;
+    height: 100%;
+    background-color: #000000;
+  }
+  header #mobile-menu {
+    display: none !important;
+  }
+  header #desktop-menu {
+    display: flex !important;
+    justify-content: center;
+    gap: 2%;
+  }
+  header #desktop-menu a {
+    text-transform: uppercase;
+    font-size: var(--desktop-h3);
+  }
+  #sobre {
+    padding: 4rem 10%;
+  }
+  #sobre .content {
+    flex-direction: row;
+    gap: 4%;
+  }
+  #sobre .content img {
+    border: none;
+    border-right: 5px solid var(--primary-color);
+  }
+  #sobre .content .text p, #sobre .content .text h3 {
+    text-align: justify;
+  }
+  #associations .display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #associations .display img {
+    width: 30%;
+  }
+  #associations .display .text {
+    padding: 0% 2%;
+    display: flex;
+  }
+  #projects .filter {
+    justify-content: start;
+    gap: 2rem;
+  }
+  #ONU .cards {
+    justify-content: space-between;
+  }
+  .contact {
+    padding: 5%;
+  }
+  footer .flex {
+    flex-direction: row;
+    gap: 20px;
+  }
+  footer .flex .logo {
+    width: 30%;
+  }
+  footer .flex #footer-content {
+    align-items: start;
+    flex-direction: row;
+  }
+  footer .flex #footer-content h2 {
+    text-align: start;
+  }
+  footer .flex #footer-content #footer-contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .flex #footer-content #footer-contact ul li {
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
