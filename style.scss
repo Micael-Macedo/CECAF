@@ -170,6 +170,7 @@ header {
       width: 100%;
       text-align: center;
       background-color: var(--primary-color);
+      color: var(--s-text);
       padding: 2rem 0;
       font-size: var(--mobile-h3);
       font-weight: bold;
@@ -193,7 +194,7 @@ header {
   }
 }
 #sobre {
-  pa2ding: 4rem 0;
+  padding: 4rem 0;
   .content {
     display: flex;
     flex-direction: column;
@@ -202,6 +203,7 @@ header {
     }
     .text {
       text-align: center;
+      padding: 0% 1%;
       h3 {
         font-size: var(--mobile-h3);
         margin: 2rem 0;
@@ -305,7 +307,11 @@ header {
         .infos {
           width: 100%;
           display: flex;
+          align-items: center;
           justify-content: space-between;
+          p{
+            font-size: var(--mobile-txt);
+          }
         }
         a {
           padding: 5px 10px;
