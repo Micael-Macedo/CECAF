@@ -20,9 +20,9 @@ html {
   --bg-logo: #ffffff;
   --mobile-txt: 1.6rem;
   --mobile-txt2: 1.4rem;
-  --mobile-h1: 3.4rem;
-  --mobile-h2: 3.4rem;
-  --mobile-h3: 1.8rem;
+  --mobile-h1: 2.5rem;
+  --mobile-h2: 2.5rem;
+  --mobile-h3: 2rem;
   --desktop-txt: 1.8rem;
   --desktop-h1: 3.2rem;
   --desktop-h2: 3.2rem;
@@ -105,6 +105,7 @@ header {
   align-items: center;
   justify-content: center;
   background-color: var(--secondary-color);
+  padding-top: 1rem;
   gap: 1rem;
 }
 header #desktop-menu {
@@ -169,14 +170,66 @@ header nav ul a {
   text-transform: uppercase;
 }
 
-#sobre img {
-  border-color: var(--primary-color);
-  border-bottom: 5px solid;
+#main .news {
+  background-color: var(--secondary-color);
 }
-#sobre .text {
+#main .news h1 {
+  font-size: var(--mobile-h1);
+  text-align: start;
+  padding: 1rem;
+}
+#main .news a.btn {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 2rem 0;
+  font-size: var(--mobile-h3);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#main #btns-news {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main #btns-news .btn {
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--s-text);
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+}
+#main #btns-news .btn.btn-selected {
+  background-color: var(--primary-color);
+}
+
+#sobre {
+  pa2ding: 4rem 0;
+}
+#sobre .content {
+  display: flex;
+  flex-direction: column;
+}
+#sobre .content img {
+  border-bottom: 5px solid var(--primary-color);
+}
+#sobre .content .text {
+  text-align: center;
+}
+#sobre .content .text h3 {
+  font-size: var(--mobile-h3);
+  margin: 2rem 0;
+}
+#sobre .content .text p {
+  font-size: var(--mobile-txt);
   text-align: center;
 }
 
+#associations {
+  padding: 2rem 0;
+}
 #associations img {
   width: 100%;
 }
@@ -350,12 +403,34 @@ footer .flex #footer-content #footer-social ul {
   gap: 10px;
 }
 footer .flex #footer-content #footer-social ul i {
+  display: flex;
+  font-size: 4.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
   color: var(--s-text);
+  border-radius: 50%;
   background-color: var(--p-text);
+}
+footer .flex #footer-content #footer-social ul a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer .flex #footer-content #footer-social ul i.bi-facebook {
   color: var(--p-text);
   background-color: var(--s-text);
+}
+footer .flex #footer-content #footer-social ul i.bi-instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+}
+footer .flex #footer-content #footer-social ul i.bi-telephone-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
 }
 footer .flex #footer-content #footer-contact li {
   padding-left: 10%;
@@ -371,6 +446,7 @@ footer .flex #footer-content #footer-contact li .info i {
   color: var(--p-text);
 }
 footer .copyright {
+  padding: 1rem 0;
   font-size: var(--mobile-txt);
   border-top: 5px solid var(--primary-color);
   text-align: center;
