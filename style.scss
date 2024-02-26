@@ -160,11 +160,15 @@ header {
 }
 #main {
   .news {
-    background-color: var(--secondary-color);
+    width: 100%;
     h1 {
+      background-color: var(--secondary-color);
       font-size: var(--mobile-h1);
       text-align: start;
       padding: 1rem;
+    }
+    img {
+      width: 100%;
     }
     a.btn {
       justify-content: center;
@@ -224,6 +228,7 @@ header {
   .text {
     padding: 0% 6%;
     ul {
+      width: 100%;
       li {
         display: flex;
         align-items: center;
@@ -234,6 +239,7 @@ header {
           font-size: var(--mobile-txt);
         }
         p.text {
+          white-space: nowrap;
           padding-left: 3%;
           padding-right: 0%;
         }
@@ -464,17 +470,24 @@ footer {
   background-color: var(--bg-logo);
   border-radius: 50%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 425px) {
+  #projects {
+    .filter {
+      justify-content: start;
+      gap: 2rem;
+    }
+  }
 }
 @media screen and (min-width: 1024px) {
   h2 {
     text-align: start;
   }
-  h3{
+  h3 {
     font-size: var(--desktop-h3) !important;
   }
-  .header h2, .contact a{
-   font-size: var(--desktop-h2);
+  .header h2,
+  .contact a {
+    font-size: var(--desktop-h2);
   }
   .device-padding {
     padding: 2% 10%;
@@ -499,6 +512,29 @@ footer {
       }
     }
   }
+  #main {
+    .news {
+      position: relative;
+      .new {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        .info {
+          display: flex;
+          height: 30%;
+          flex-direction: column;
+          position: absolute;
+          gap: 3%;
+          width: 65%;
+          bottom: 0%;
+          a {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
   #sobre {
     padding: 4rem 10%;
     .content {
@@ -508,7 +544,8 @@ footer {
         border: none;
         border-right: 5px solid var(--primary-color);
       }
-      .text p, .text h3{
+      .text p,
+      .text h3 {
         text-align: justify;
       }
     }
@@ -527,18 +564,16 @@ footer {
       }
     }
   }
-  #projects {
-    .filter {
-      justify-content: start;
-      gap: 2rem;
-    }
-  }
+
   #ONU {
     .cards {
       justify-content: space-between;
+      img {
+        width: 120px;
+      }
     }
   }
-  .contact{
+  .contact {
     padding: 5%;
   }
   footer {
