@@ -48,6 +48,33 @@ h2 {
 p {
   font-family: "Nunito", sans-serif;
 }
+#mobile-nav {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--secondary-color);
+  z-index: 5;
+  text-align: center;
+  border-top: 5px solid var(--p-text);
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    li {
+      width: 100%;
+      a {
+        font-size: var(--desktop-h2);
+        font-weight: bold;
+      }
+    }
+  }
+}
 .device-padding {
   padding: 0 2%;
 }
@@ -67,21 +94,21 @@ header {
   justify-content: center;
   background-color: var(--secondary-color);
   gap: 1rem;
-  #desktop-menu{
+  #desktop-menu {
     display: none;
   }
-  #mobile-menu{
+  #mobile-menu {
     display: flex;
     align-items: center;
     justify-content: center;
-    button{
+    margin-bottom: 1rem;
+    button {
       background-color: transparent;
-
     }
   }
-  
+
   img {
-    width: 15%;
+    width: 25%;
     background-color: var(--bg-logo);
     border-radius: 50%;
   }
@@ -138,6 +165,9 @@ header {
   }
 }
 #associations {
+  img{
+    width: 100%;
+  }
   .text {
     padding: 0% 6%;
     ul {
@@ -150,7 +180,7 @@ header {
         i {
           font-size: var(--mobile-txt);
         }
-        p.text{
+        p.text {
           padding-left: 3%;
           padding-right: 0%;
         }
@@ -162,23 +192,22 @@ header {
   }
 }
 #projects {
-  .filter{
+  .filter {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
-    .opt{
+    .opt {
       padding: 10px 5px;
       background-color: transparent;
       border: 5px solid var(--primary-color);
       font-weight: bold;
       text-transform: uppercase;
-      &.selected{
+      &.selected {
         border: 5px solid var(--secondary-color);
         background-color: var(--secondary-color);
       }
     }
-    
   }
   .cards {
     width: auto;
@@ -205,13 +234,12 @@ header {
         background-color: var(--primary-color);
         color: var(--s-text);
         padding: 1rem;
-        i{
+        i {
           font-size: 3rem;
         }
-        p{
+        p {
           font-size: 1.4rem;
         }
-
       }
       img {
         width: 100%;
@@ -228,20 +256,20 @@ header {
           display: flex;
           justify-content: space-between;
         }
-        a{
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: var(--mobile-txt);
-            color: var(--s-text);
+        a {
+          padding: 5px 10px;
+          border-radius: 10px;
+          font-size: var(--mobile-txt);
+          color: var(--s-text);
         }
       }
     }
   }
-  .navegation-project{
+  .navegation-project {
     display: flex;
     align-items: center;
     justify-content: center;
-    .projects-opts{
+    .projects-opts {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -251,7 +279,7 @@ header {
         height: 15px;
         border-radius: 50%;
         background-color: var(--secondary-color);
-        &.selected{
+        &.selected {
           background-color: var(--primary-color);
         }
       }
