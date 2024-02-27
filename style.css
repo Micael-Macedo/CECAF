@@ -6,6 +6,12 @@
   border: none;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  scroll-padding-top: 26vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
 }
 
 html {
@@ -23,7 +29,7 @@ html {
   --mobile-h1: 2.5rem;
   --mobile-h2: 2.5rem;
   --mobile-h3: 2rem;
-  --desktop-txt: 1.8rem;
+  --desktop-txt: 2rem;
   --desktop-h1: 3.2rem;
   --desktop-h2: 3.2rem;
   --desktop-h3: 2.4rem;
@@ -57,19 +63,35 @@ p {
   font-family: "Nunito", sans-serif;
 }
 
+@keyframes slide {
+  from {
+    right: -100vw;
+  }
+  to {
+    right: 0vw;
+  }
+}
 #mobile-nav {
   display: none;
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: var(--secondary-color);
+  right: -100vw;
   z-index: 5;
   text-align: center;
-  border-top: 5px solid var(--p-text);
-  align-items: center;
+  padding-top: 21vh;
+  align-items: start;
   justify-content: center;
+  transition: 0.5s;
+}
+#mobile-nav.show {
+  display: flex;
+  right: 0vw;
+  animation: slide 0.5s;
 }
 #mobile-nav ul {
+  border-top: 5px solid var(--p-text);
   width: 100%;
   height: 80%;
   display: flex;
@@ -99,7 +121,9 @@ hr {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
+  height: 180px;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,11 +131,20 @@ header {
   background-color: var(--secondary-color);
   padding-top: 1rem;
   gap: 1rem;
+  z-index: 10;
+}
+header i.line {
+  width: 1px;
+  height: 100%;
+  background-color: #000000;
 }
 header #desktop-menu {
   display: none;
+  background-color: var(--secondary-color);
+  padding-bottom: 1rem;
 }
 header #mobile-menu {
+  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,6 +157,7 @@ header img {
   width: 25%;
   background-color: var(--bg-logo);
   border-radius: 50%;
+  max-width: 90px;
 }
 header hr {
   width: 100%;
@@ -173,6 +207,9 @@ header nav ul li a {
   text-transform: uppercase;
 }
 
+#main {
+  padding-top: 180px;
+}
 #main .news {
   width: 100%;
 }
@@ -214,7 +251,7 @@ header nav ul li a {
 }
 
 #sobre {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
 }
 #sobre .content {
   display: flex;
@@ -230,6 +267,7 @@ header nav ul li a {
 #sobre .content .text h3 {
   font-size: var(--mobile-h3);
   margin: 2rem 0;
+  text-transform: uppercase;
 }
 #sobre .content .text p {
   font-size: var(--mobile-txt);
@@ -240,7 +278,7 @@ header nav ul li a {
   width: 100%;
 }
 #associations .text {
-  padding: 0% 6%;
+  padding: 0%;
 }
 #associations .text ul {
   width: 100%;
@@ -261,6 +299,9 @@ header nav ul li a {
   padding-right: 0%;
 }
 #associations .text ul li .p-color {
+  color: var(--primary-color);
+}
+#associations .bi-geo-alt-fill {
   color: var(--primary-color);
 }
 
@@ -291,11 +332,11 @@ header nav ul li a {
 }
 #projects .cards .card {
   width: 100%;
-  min-width: 310px;
   display: flex;
   align-items: center;
   position: relative;
   flex-direction: column;
+  max-width: 310px;
 }
 #projects .cards .card .status {
   display: flex;
@@ -368,6 +409,9 @@ header nav ul li a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+#ONU .cards img {
+  width: 8rem;
 }
 
 .flex {
@@ -466,13 +510,8 @@ footer .copyright {
   text-align: center;
 }
 
-#associations .bi-geo-alt-fill {
-  color: var(--primary-color);
-}
-
 .logo {
   width: 70%;
-  max-width: 228px;
   background-color: var(--bg-logo);
   border-radius: 50%;
 }
@@ -483,12 +522,57 @@ footer .copyright {
     gap: 2rem;
   }
 }
+@media screen and (min-width: 768px) {
+  header {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  header img {
+    max-width: 160px;
+  }
+  #main {
+    padding-top: 234px;
+  }
+  #mobile-menu {
+    display: none !important;
+  }
+  #desktop-menu {
+    display: flex !important;
+    justify-content: center;
+    gap: 2%;
+  }
+  #desktop-menu a {
+    text-transform: uppercase;
+    font-size: var(--desktop-h3);
+  }
+  #associations {
+    padding-bottom: 4%;
+  }
+  #associations .display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #associations .display img {
+    width: 50%;
+  }
+  #associations .display .text {
+    display: flex;
+    gap: 5%;
+  }
+  #ONU img {
+    width: 100px;
+  }
+}
 @media screen and (min-width: 1024px) {
   h2 {
     text-align: start;
   }
   h3 {
     font-size: var(--desktop-h3) !important;
+  }
+  p {
+    font-size: var(--desktop-txt);
   }
   .header h2,
   .contact a {
@@ -498,24 +582,15 @@ footer .copyright {
     padding: 2% 10%;
   }
   header {
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 1vh 10vw;
   }
-  header i.line {
-    width: 1px;
-    height: 100%;
-    background-color: #000000;
+  header .logo {
+    max-width: 228px;
   }
-  header #mobile-menu {
-    display: none !important;
-  }
-  header #desktop-menu {
-    display: flex !important;
-    justify-content: center;
-    gap: 2%;
-  }
-  header #desktop-menu a {
-    text-transform: uppercase;
-    font-size: var(--desktop-h3);
+  header ul {
+    padding-bottom: 0;
   }
   #main .news {
     position: relative;
@@ -525,6 +600,9 @@ footer .copyright {
   }
   #main .news .new img {
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 70vh;
   }
   #main .news .new .info {
     display: flex;
@@ -546,6 +624,7 @@ footer .copyright {
     gap: 4%;
   }
   #sobre .content img {
+    min-width: 32%;
     border: none;
     border-right: 5px solid var(--primary-color);
   }
@@ -553,35 +632,57 @@ footer .copyright {
   #sobre .content .text h3 {
     text-align: justify;
   }
+  #sobre .content .text p {
+    font-size: 2.3rem;
+  }
+  #associations {
+    padding: 2%;
+  }
+  #associations .header {
+    padding: 2% 8%;
+  }
   #associations .display {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
   }
   #associations .display img {
-    width: 30%;
+    width: 25%;
   }
   #associations .display .text {
     padding: 0% 2%;
     display: flex;
+    gap: 5%;
+  }
+  #associations .display .text ul {
+    gap: 30px;
+  }
+  #associations .display .text ul p {
+    font-size: 20px;
   }
   #ONU .cards {
     justify-content: space-between;
   }
   #ONU .cards img {
-    width: 120px;
+    width: 150px;
   }
   .contact {
     padding: 5%;
   }
+  footer .logo {
+    width: 15%;
+  }
   footer .flex {
+    padding: 2%;
     flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
     gap: 20px;
   }
-  footer .flex .logo {
-    width: 30%;
-  }
   footer .flex #footer-content {
+    width: 60%;
     align-items: start;
     flex-direction: row;
   }
@@ -595,5 +696,11 @@ footer .copyright {
   }
   footer .flex #footer-content #footer-contact ul li {
     padding: 0;
+  }
+  footer .flex #footer-content #footer-social ul {
+    justify-content: start;
+  }
+  footer .flex #footer-content #footer-social ul li {
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */
