@@ -6,12 +6,6 @@
   border: none;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  scroll-padding-top: 26vh;
-  scroll-behavior: smooth;
-}
-
-body {
-  width: 100%;
 }
 
 html {
@@ -410,9 +404,6 @@ header nav ul li a {
   justify-content: center;
   flex-wrap: wrap;
 }
-#ONU .cards img {
-  width: 8rem;
-}
 
 .flex {
   display: flex;
@@ -586,8 +577,13 @@ footer .copyright {
     height: fit-content;
     padding: 1vh 10vw;
   }
-  header .logo {
-    max-width: 228px;
+  header img {
+    max-width: 220px;
+  }
+  header i.line {
+    width: 1px;
+    height: 100%;
+    background-color: #000000;
   }
   header ul {
     padding-bottom: 0;
@@ -697,10 +693,14 @@ footer .copyright {
   footer .flex #footer-content #footer-contact ul li {
     padding: 0;
   }
-  footer .flex #footer-content #footer-social ul {
-    justify-content: start;
+}
+@media screen and (min-width: 1440px) {
+  #body-content {
+    max-width: 1440px;
+    margin: 0 auto;
   }
-  footer .flex #footer-content #footer-social ul li {
-    width: auto;
+  footer .flex {
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */
