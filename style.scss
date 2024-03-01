@@ -541,7 +541,7 @@ footer {
 @media screen and (min-width: 768px) {
   header{
     height: fit-content;
-    img, .header_logo{
+    .header_logo{
       max-width: 160px;
     }
   }
@@ -602,8 +602,8 @@ footer {
   header {
     height: 301px;
     padding: 1vh 10vw;
-    img, .header_logo {
-      max-width: 228px;
+    .header_logo {
+      max-width: 200px;
     }
     ul{
       padding-bottom: 0;

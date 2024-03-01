@@ -554,7 +554,7 @@ footer .copyright {
     height: -moz-fit-content;
     height: fit-content;
   }
-  header img, header .header_logo {
+  header .header_logo {
     max-width: 160px;
   }
   #main {
@@ -612,8 +612,8 @@ footer .copyright {
     height: 301px;
     padding: 1vh 10vw;
   }
-  header img, header .header_logo {
-    max-width: 228px;
+  header .header_logo {
+    max-width: 200px;
   }
   header ul {
     padding-bottom: 0;
