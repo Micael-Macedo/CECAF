@@ -6,7 +6,7 @@
   border: none;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  scroll-padding-top: 26vh;
+  scroll-padding-top: 30vh;
   scroll-behavior: smooth;
 }
 body {
@@ -75,6 +75,7 @@ p {
   justify-content: center;
   transition: .5s;
   &.show{
+    transition: .5s;
     display: flex;
     right: 0vw;
     animation: slide .5s;
@@ -400,7 +401,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     img{
-      width: 8rem;
+      width: 80px;
     }
   }
 }
@@ -579,7 +580,7 @@ footer {
     padding: 2% 10%;
   }
   header {
-    height: fit-content;
+    height: 301px;
     padding: 1vh 10vw;
     img, .header_logo {
       max-width: 228px;
@@ -590,6 +591,7 @@ footer {
     
   }
   #main {
+    padding-top: 301px;
     .news {
       position: relative;
       .new {
@@ -708,6 +710,19 @@ footer {
           }
         }
       }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  #body-content{
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  footer{
+    .flex{
+      max-width: 1800px;
+      margin: 0 auto;
+      
     }
   }
 }

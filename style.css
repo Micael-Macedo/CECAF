@@ -6,7 +6,7 @@
   border: none;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  scroll-padding-top: 26vh;
+  scroll-padding-top: 30vh;
   scroll-behavior: smooth;
 }
 
@@ -86,6 +86,7 @@ p {
   transition: 0.5s;
 }
 #mobile-nav.show {
+  transition: 0.5s;
   display: flex;
   right: 0vw;
   animation: slide 0.5s;
@@ -417,7 +418,7 @@ header nav ul li a {
   flex-wrap: wrap;
 }
 #ONU .cards img {
-  width: 8rem;
+  width: 80px;
 }
 
 .flex {
@@ -588,8 +589,7 @@ footer .copyright {
     padding: 2% 10%;
   }
   header {
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 301px;
     padding: 1vh 10vw;
   }
   header img, header .header_logo {
@@ -597,6 +597,9 @@ footer .copyright {
   }
   header ul {
     padding-bottom: 0;
+  }
+  #main {
+    padding-top: 301px;
   }
   #main .news {
     position: relative;
@@ -708,5 +711,15 @@ footer .copyright {
   }
   footer .flex #footer-content #footer-social ul li {
     width: auto;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #body-content {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  footer .flex {
+    max-width: 1800px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */
