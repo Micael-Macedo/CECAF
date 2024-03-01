@@ -153,11 +153,12 @@ header #mobile-menu {
 header #mobile-menu button {
   background-color: transparent;
 }
-header img {
+header .header_logo {
   width: 25%;
   background-color: var(--bg-logo);
   border-radius: 50%;
   max-width: 90px;
+  aspect-ratio: 1/1;
 }
 header hr {
   width: 100%;
@@ -187,6 +188,11 @@ header nav ul li a {
 .header h2 {
   color: var(--primary-color);
   font-size: var(--mobile-h2);
+}
+
+#contact {
+  padding-top: 30vh;
+  height: 80vh;
 }
 
 .contact {
@@ -527,7 +533,7 @@ footer .copyright {
     height: -moz-fit-content;
     height: fit-content;
   }
-  header img {
+  header img, header .header_logo {
     max-width: 160px;
   }
   #main {
@@ -586,7 +592,7 @@ footer .copyright {
     height: fit-content;
     padding: 1vh 10vw;
   }
-  header .logo {
+  header img, header .header_logo {
     max-width: 228px;
   }
   header ul {

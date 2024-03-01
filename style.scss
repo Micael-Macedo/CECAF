@@ -138,11 +138,12 @@ header {
       background-color: transparent;
     }
   }
-  img {
+  .header_logo {
     width: 25%;
     background-color: var(--bg-logo);
     border-radius: 50%;
     max-width: 90px;
+    aspect-ratio: 1/1;
   }
   hr {
     width: 100%;
@@ -172,6 +173,10 @@ header {
     font-size: var(--mobile-h2);
   }
   margin-bottom: 10px;
+}
+#contact{
+  padding-top: 30vh;
+  height: 80vh;
 }
 .contact {
   width: 100%;
@@ -515,7 +520,7 @@ footer {
 @media screen and (min-width: 768px) {
   header{
     height: fit-content;
-    img{
+    img, .header_logo{
       max-width: 160px;
     }
   }
@@ -576,7 +581,7 @@ footer {
   header {
     height: fit-content;
     padding: 1vh 10vw;
-    .logo {
+    img, .header_logo {
       max-width: 228px;
     }
     ul{
