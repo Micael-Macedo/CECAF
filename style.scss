@@ -178,6 +178,26 @@ header {
 #contact{
   padding-top: 30vh;
   height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    input, textarea{
+      width: 100%;
+      border: 3px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+    button{
+      width: 100%;
+      font-weight: 700;
+      padding: 5%;
+      background-color: var(--primary-color);
+    }
+  }
 }
 .contact {
   width: 100%;
