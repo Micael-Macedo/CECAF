@@ -23,7 +23,7 @@ html {
   --bg-logo: #ffffff;
   --mobile-txt: 1.6rem;
   --mobile-txt2: 1.4rem;
-  --mobile-h1: 2.5rem;
+  --mobile-h1: 2rem;
   --mobile-h2: 2.5rem;
   --mobile-h3: 2rem;
   --desktop-txt: 2rem;
@@ -46,6 +46,9 @@ h2 {
   font-family: "Roboto";
   text-transform: uppercase;
   text-align: center;
+}
+h1{
+  font-size: var(--mobile-h1);
 }
 h2 {
   font-size: var(--mobile-h2);
@@ -530,6 +533,46 @@ footer {
   background-color: var(--bg-logo);
   border-radius: 50%;
 }
+
+main{
+  padding: 190px 2% 5%;
+  padding-top: 190px;
+  min-height: 80vh;
+  #news{
+    .main-img{
+      width: 100%;
+      margin: 5% 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img{
+      width: 100%;
+      max-width: max-content;
+    }
+    height: 100%;
+    h1{
+      text-align: center;
+      color: var(--p-text);
+    }
+    p{
+      font-size: var(--mobile-txt);
+    }
+    a{
+      color: var(--primary-color);
+      transition: .5s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    .text{
+      display: flex;
+      flex-direction: column;
+      gap: var(--mobile-txt);
+    }
+  }
+}
+
 @media screen and (min-width: 425px) {
   #projects {
     .filter {
@@ -545,9 +588,15 @@ footer {
       max-width: 160px;
     }
   }
-  #main{
+  #main, main{
     padding-top: 234px;
   }
+  main{
+    h1{
+      margin-top: 3%;
+    }
+  }
+
   #mobile-menu {
     display: none !important;
   }
@@ -609,6 +658,12 @@ footer {
       padding-bottom: 0;
     }
     
+  }
+  main{
+    padding-top: 301px;
+    h1{
+      font-size: var(--desktop-h1);
+    }
   }
   #main {
     padding-top: 301px;

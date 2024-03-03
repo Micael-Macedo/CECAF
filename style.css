@@ -26,7 +26,7 @@ html {
   --bg-logo: #ffffff;
   --mobile-txt: 1.6rem;
   --mobile-txt2: 1.4rem;
-  --mobile-h1: 2.5rem;
+  --mobile-h1: 2rem;
   --mobile-h2: 2.5rem;
   --mobile-h3: 2rem;
   --desktop-txt: 2rem;
@@ -53,6 +53,10 @@ h2 {
   font-family: "Roboto";
   text-transform: uppercase;
   text-align: center;
+}
+
+h1 {
+  font-size: var(--mobile-h1);
 }
 
 h2 {
@@ -543,6 +547,46 @@ footer .copyright {
   border-radius: 50%;
 }
 
+main {
+  padding: 190px 2% 5%;
+  padding-top: 190px;
+  min-height: 80vh;
+}
+main #news {
+  height: 100%;
+}
+main #news .main-img {
+  width: 100%;
+  margin: 5% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #news img {
+  width: 100%;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+main #news h1 {
+  text-align: center;
+  color: var(--p-text);
+}
+main #news p {
+  font-size: var(--mobile-txt);
+}
+main #news a {
+  color: var(--primary-color);
+  transition: 0.5s;
+}
+main #news a:hover {
+  transform: scale(1.1);
+}
+main #news .text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mobile-txt);
+}
+
 @media screen and (min-width: 425px) {
   #projects .filter {
     justify-content: start;
@@ -557,8 +601,11 @@ footer .copyright {
   header .header_logo {
     max-width: 160px;
   }
-  #main {
+  #main, main {
     padding-top: 234px;
+  }
+  main h1 {
+    margin-top: 3%;
   }
   #mobile-menu {
     display: none !important;
@@ -617,6 +664,12 @@ footer .copyright {
   }
   header ul {
     padding-bottom: 0;
+  }
+  main {
+    padding-top: 301px;
+  }
+  main h1 {
+    font-size: var(--desktop-h1);
   }
   #main {
     padding-top: 301px;
