@@ -240,15 +240,44 @@ header nav ul li a {
 
 #main {
   padding-top: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 #main .news {
-  width: 100%;
+  display: flex;
+  position: relative;
+  transition: 0.5s;
+  width: 100vw;
+  max-width: 1440px;
+}
+#main .news .gallery {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+}
+#main .news .gallery .gallery-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100vw;
+  max-width: 1440px;
+}
+#main .news .gallery .gallery-wrapper .new img {
+  width: 100vw;
+  max-width: 1440px;
+}
+#main .news .gallery .gallery-wrapper::-webkit-scrollbar {
+  display: none;
 }
 #main .news h1 {
   background-color: var(--secondary-color);
   font-size: var(--mobile-h1);
   text-align: start;
   padding: 1rem;
+  text-wrap: wrap;
 }
 #main .news img {
   width: 100%;
@@ -551,8 +580,12 @@ main {
   padding: 190px 2% 5%;
   padding-top: 190px;
   min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main #news {
+  max-width: 1400px;
   height: 100%;
 }
 main #news .main-img {
@@ -637,6 +670,9 @@ main #news .text {
   #ONU img {
     width: 100px;
   }
+  #sobre img {
+    width: 30%;
+  }
 }
 @media screen and (min-width: 1024px) {
   h2 {
@@ -660,7 +696,10 @@ main #news .text {
     padding: 1vh 10vw;
   }
   header .header_logo {
-    max-width: 200px;
+    max-width: 200px !important;
+  }
+  header .header_logo img {
+    width: 100%;
   }
   header ul {
     padding-bottom: 0;
@@ -682,8 +721,8 @@ main #news .text {
   }
   #main .news .new img {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: fill;
+       object-fit: fill;
     height: 70vh;
   }
   #main .news .new .info {
@@ -706,7 +745,7 @@ main #news .text {
     gap: 4%;
   }
   #sobre .content img {
-    min-width: 32%;
+    width: 100%;
     border: none;
     border-right: 5px solid var(--primary-color);
   }

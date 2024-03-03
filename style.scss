@@ -221,13 +221,45 @@ header {
 }
 #main {
   padding-top: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   .news {
-    width: 100%;
+    display: flex;
+    position: relative;
+    transition: .5s;
+    width: 100vw;
+    max-width: 1440px;
+    .gallery{
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      justify-content: center;
+      .gallery-wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100vw;
+        max-width: 1440px;
+        .new{
+          img{
+            width: 100vw;
+            max-width: 1440px;
+          }
+        }
+        &::-webkit-scrollbar{
+          display: none;
+        }
+      }
+    }
+  
     h1 {
       background-color: var(--secondary-color);
       font-size: var(--mobile-h1);
       text-align: start;
       padding: 1rem;
+      text-wrap: wrap;
     }
     img {
       width: 100%;
@@ -538,7 +570,11 @@ main{
   padding: 190px 2% 5%;
   padding-top: 190px;
   min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   #news{
+    max-width: 1400px;
     .main-img{
       width: 100%;
       margin: 5% 0%;
@@ -630,6 +666,11 @@ main{
       width: 100px;
     }
   }
+  #sobre{
+    img{
+      width: 30%;
+    }
+  }
 }
 @media screen and (min-width: 1024px) {
   h2 {
@@ -652,7 +693,10 @@ main{
     height: 301px;
     padding: 1vh 10vw;
     .header_logo {
-      max-width: 200px;
+      max-width: 200px !important;
+      img{
+        width: 100%;
+      }
     }
     ul{
       padding-bottom: 0;
@@ -673,7 +717,7 @@ main{
         position: relative;
         img {
           width: 100%;
-          object-fit: cover;
+          object-fit: fill;
           height: 70vh;
         }
         .info {
@@ -697,7 +741,7 @@ main{
       flex-direction: row;
       gap: 4%;
       img {
-        min-width: 32%;
+        width: 100%;
         border: none;
         border-right: 5px solid var(--primary-color);
       }
