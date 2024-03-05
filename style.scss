@@ -229,23 +229,22 @@ header {
     display: flex;
     position: relative;
     transition: .5s;
-    width: 100vw;
-    max-width: 1440px;
+    width: 100%;
     .gallery{
       display: flex;
       flex-direction: column;
-      width: 100vw;
+      width: inherit;
       justify-content: center;
       .gallery-wrapper{
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        width: 100vw;
-        max-width: 1440px;
+        width: inherit;
+        max-width: inherit;
         .new{
           img{
             width: 100vw;
-            max-width: 1440px;
+            max-width: inherit;
           }
         }
         &::-webkit-scrollbar{
@@ -289,6 +288,47 @@ header {
       border-radius: 50%;
       &.btn-selected {
         background-color: var(--primary-color);
+      }
+    }
+  }
+}
+#acting{
+  h2{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .info{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 5px;
+      max-width: 160px;
+      .text{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        i{
+        }
+        h3{
+          color: var(--secondary-color);
+          font-size: 4rem !important;
+          font-weight: 700;
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+      }
+        .border{
+          width: 50px;
+          height: 20px;
+          background-color: var(--primary-color);
       }
     }
   }
@@ -621,7 +661,7 @@ main{
   header{
     height: fit-content;
     .header_logo{
-      max-width: 160px;
+      max-width: 140px;
     }
   }
   #main, main{
@@ -690,10 +730,10 @@ main{
     padding: 2% 10%;
   }
   header {
-    height: 301px;
+    height: 250px;
     padding: 1vh 10vw;
     .header_logo {
-      max-width: 200px !important;
+      max-width: 140px !important;
       img{
         width: 100%;
       }
@@ -704,13 +744,13 @@ main{
     
   }
   main{
-    padding-top: 301px;
+    padding-top: 250px;
     h1{
       font-size: var(--desktop-h1);
     }
   }
   #main {
-    padding-top: 301px;
+    padding-top: 250px;
     .news {
       position: relative;
       .new {
@@ -745,6 +785,9 @@ main{
         border: none;
         border-right: 5px solid var(--primary-color);
       }
+      .text{
+        width: 120%;
+      }
       .text p,
       .text h3 {
         text-align: justify;
@@ -752,6 +795,14 @@ main{
       .text p{
         font-size: 2.3rem;
       }
+    }
+  }
+  #acting{
+    .content{
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      justify-content: space-between;
     }
   }
   #associations {

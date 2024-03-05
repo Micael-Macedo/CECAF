@@ -1,5 +1,4 @@
 <?php
-$from = "";
 $to      = 'micael.barbosa@fieb.org.com';
 $subject = 'the subject';
 $message = 'hello';

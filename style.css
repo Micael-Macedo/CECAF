@@ -249,25 +249,24 @@ header nav ul li a {
   display: flex;
   position: relative;
   transition: 0.5s;
-  width: 100vw;
-  max-width: 1440px;
+  width: 100%;
 }
 #main .news .gallery {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: inherit;
   justify-content: center;
 }
 #main .news .gallery .gallery-wrapper {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  width: 100vw;
-  max-width: 1440px;
+  width: inherit;
+  max-width: inherit;
 }
 #main .news .gallery .gallery-wrapper .new img {
   width: 100vw;
-  max-width: 1440px;
+  max-width: inherit;
 }
 #main .news .gallery .gallery-wrapper::-webkit-scrollbar {
   display: none;
@@ -307,6 +306,44 @@ header nav ul li a {
   border-radius: 50%;
 }
 #main #btns-news .btn.btn-selected {
+  background-color: var(--primary-color);
+}
+
+#acting h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#acting .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#acting .content .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 160px;
+}
+#acting .content .info .text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#acting .content .info .text h3 {
+  color: var(--secondary-color);
+  font-size: 4rem !important;
+  font-weight: 700;
+  text-align: center;
+}
+#acting .content .info .text p {
+  text-align: center;
+}
+#acting .content .info .border {
+  width: 50px;
+  height: 20px;
   background-color: var(--primary-color);
 }
 
@@ -632,7 +669,7 @@ main #news .text {
     height: fit-content;
   }
   header .header_logo {
-    max-width: 160px;
+    max-width: 140px;
   }
   #main, main {
     padding-top: 234px;
@@ -692,11 +729,11 @@ main #news .text {
     padding: 2% 10%;
   }
   header {
-    height: 301px;
+    height: 250px;
     padding: 1vh 10vw;
   }
   header .header_logo {
-    max-width: 200px !important;
+    max-width: 140px !important;
   }
   header .header_logo img {
     width: 100%;
@@ -705,13 +742,13 @@ main #news .text {
     padding-bottom: 0;
   }
   main {
-    padding-top: 301px;
+    padding-top: 250px;
   }
   main h1 {
     font-size: var(--desktop-h1);
   }
   #main {
-    padding-top: 301px;
+    padding-top: 250px;
   }
   #main .news {
     position: relative;
@@ -749,12 +786,21 @@ main #news .text {
     border: none;
     border-right: 5px solid var(--primary-color);
   }
+  #sobre .content .text {
+    width: 120%;
+  }
   #sobre .content .text p,
   #sobre .content .text h3 {
     text-align: justify;
   }
   #sobre .content .text p {
     font-size: 2.3rem;
+  }
+  #acting .content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
   }
   #associations {
     padding: 2%;
