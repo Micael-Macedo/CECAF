@@ -307,14 +307,13 @@ header {
       justify-content: space-between;
       flex-direction: column;
       gap: 5px;
-      max-width: 160px;
+      width: 160px;
       .text{
         display: flex;
         align-items: center;
         flex-direction: column;
         justify-content: space-between;
-        i{
-        }
+        
         h3{
           color: var(--secondary-color);
           font-size: 4rem !important;
@@ -629,7 +628,7 @@ main{
     height: 100%;
     h1{
       text-align: center;
-      color: var(--p-text);
+      color: var(--mobile-h1);
     }
     p{
       font-size: var(--mobile-txt);
@@ -766,13 +765,18 @@ main{
           flex-direction: column;
           position: absolute;
           gap: 3%;
-          width: 65%;
+          width: 50%;
           bottom: 0%;
           a {
             width: 30%;
           }
         }
       }
+    }
+  }
+  #news{
+    h1{
+      font-size: var(--desktop-h1) !important;
     }
   }
   #sobre {

@@ -324,7 +324,7 @@ header nav ul li a {
   justify-content: space-between;
   flex-direction: column;
   gap: 5px;
-  max-width: 160px;
+  width: 160px;
 }
 #acting .content .info .text {
   display: flex;
@@ -639,7 +639,7 @@ main #news img {
 }
 main #news h1 {
   text-align: center;
-  color: var(--p-text);
+  color: var(--mobile-h1);
 }
 main #news p {
   font-size: var(--mobile-txt);
@@ -768,11 +768,14 @@ main #news .text {
     flex-direction: column;
     position: absolute;
     gap: 3%;
-    width: 65%;
+    width: 50%;
     bottom: 0%;
   }
   #main .news .new .info a {
     width: 30%;
+  }
+  #news h1 {
+    font-size: var(--desktop-h1) !important;
   }
   #sobre {
     padding: 4rem 10%;
