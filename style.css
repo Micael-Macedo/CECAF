@@ -196,10 +196,9 @@ header nav ul li a {
 }
 
 #contact {
-  padding-top: 30vh;
-  height: 80vh;
+  height: 50vh;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 #contact form {
@@ -208,15 +207,21 @@ header nav ul li a {
   flex-direction: column;
   gap: 10px;
 }
-#contact form input, #contact form textarea {
+#contact form h1 {
+  color: var(--primary-color);
+}
+#contact form input,
+#contact form textarea {
   width: 100%;
   border: 3px solid var(--primary-color);
-  color: var(--primary-color);
+  padding: 5px;
+  font-size: var(--mobile-txt);
 }
 #contact form button {
   width: 100%;
   font-weight: 700;
   padding: 5%;
+  font-size: var(--mobile-txt);
   background-color: var(--primary-color);
 }
 
@@ -343,7 +348,7 @@ header nav ul li a {
 }
 #acting .content .info .border {
   width: 50px;
-  height: 20px;
+  height: 15px;
   background-color: var(--primary-color);
 }
 
@@ -671,7 +676,8 @@ main #news .text {
   header .header_logo {
     max-width: 140px;
   }
-  #main, main {
+  #main,
+  main {
     padding-top: 234px;
   }
   main h1 {

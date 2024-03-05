@@ -43,16 +43,22 @@
                 </ul>
             </nav>
         </header>
-        <section id="contact">
-            <form action="mail.php" method="post" enctype="multipart/form-data">
-                <h1>Formulário para contato</h1>
-                <input type="text" placeholder="Nome/Empresa" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Telefone" required>
-                <textarea placeholder="Mensagem"></textarea>
-                <button>ENVIAR</button>
-            </form>
-        </section>
+        <main>
+
+            <section id="contact">
+                <form action="mail.php" method="post" enctype="multipart/form-data">
+                    <div class="header">
+                        <h1>Formulário para contato</h1>
+                        <hr>
+                    </div>
+                    <input type="text" placeholder="Nome/Empresa" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Telefone" required>
+                    <textarea placeholder="Mensagem" rows="10"></textarea>
+                    <button>ENVIAR</button>
+                </form>
+            </section>
+        </main>
         <footer>
             <div class="flex">
                 <img src="imgs/CECAFBAlogo.svg" alt="" class="logo">
