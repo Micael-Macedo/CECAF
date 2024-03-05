@@ -735,8 +735,8 @@ main #news .text {
     padding: 2% 10%;
   }
   header {
-    height: 250px;
-    padding: 1vh 10vw;
+    height: 230px;
+    padding: 1vh 10vw 0vh;
   }
   header .header_logo {
     max-width: 140px !important;
@@ -748,13 +748,13 @@ main #news .text {
     padding-bottom: 0;
   }
   main {
-    padding-top: 250px;
+    padding-top: 230px;
   }
   main h1 {
     font-size: var(--desktop-h1);
   }
   #main {
-    padding-top: 250px;
+    padding-top: 230px;
   }
   #main .news {
     position: relative;
