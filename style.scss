@@ -64,6 +64,18 @@ p {
     right: 0vw;
   }
 }
+.flex {
+  display: flex;
+}
+.aic {
+  align-items: center;
+}
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
 #mobile-nav {
   display: none;
   width: 100%;
@@ -327,12 +339,62 @@ header {
         }
         p {
           text-align: center;
+          font-size: var(--mobile-txt);
         }
       }
       .border {
         width: 50px;
         height: 15px;
         background-color: var(--primary-color);
+      }
+    }
+  }
+}
+#partners {
+  .cards {
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    padding: 2%;
+  }
+  .card {
+    border: 5px solid var(--primary-color);
+    width: 130px;
+    padding: 1%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+    h3 {
+      height: inherit;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem !important;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .info {
+      width: 100%;
+      position: absolute;
+      bottom: -60%;
+      height: 60px;
+      background-color: var(--secondary-color);
+      transition: 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:hover {
+      transform: scale(1.1);
+      .info {
+        bottom: 0%;
       }
     }
   }
@@ -369,8 +431,10 @@ header {
     ul {
       width: 100%;
       li {
+        width: 100%;
         display: flex;
         align-items: center;
+
         font-size: var(--mobile-txt);
         font-family: "Roboto", sans-serif;
         font-weight: 700;
@@ -500,7 +564,7 @@ header {
     justify-content: center;
     flex-wrap: wrap;
     img {
-      width: 80px;
+      width: 130px;
     }
   }
 }
@@ -652,7 +716,14 @@ main {
     }
   }
 }
-
+@media screen and (min-width: 375px) {
+  #partners {
+    .card {
+      width: 160px;
+      font-size: 1.6rem;
+    }
+  }
+}
 @media screen and (min-width: 425px) {
   #projects {
     .filter {
@@ -670,14 +741,20 @@ main {
   }
   #main,
   main {
-    padding-top: 234px;
+    padding-top: 200px;
   }
   main {
     h1 {
       margin-top: 3%;
     }
   }
-
+  #ONU {
+    .cards {
+      img {
+        width: 100px;
+      }
+    }
+  }
   #mobile-menu {
     display: none !important;
   }
@@ -835,7 +912,7 @@ main {
         ul {
           gap: 30px;
           p {
-            font-size: 20px;
+            font-size: 1.7rem;
           }
         }
       }
@@ -896,6 +973,11 @@ main {
   #body-content {
     max-width: 1920px;
     margin: 0 auto;
+  }
+  #associations {
+    p {
+      font-size: 2.4rem !important;
+    }
   }
   footer {
     .flex {

@@ -75,6 +75,22 @@ p {
     right: 0vw;
   }
 }
+.flex {
+  display: flex;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
 #mobile-nav {
   display: none;
   width: 100%;
@@ -345,11 +361,60 @@ header nav ul li a {
 }
 #acting .content .info .text p {
   text-align: center;
+  font-size: var(--mobile-txt);
 }
 #acting .content .info .border {
   width: 50px;
   height: 15px;
   background-color: var(--primary-color);
+}
+
+#partners .cards {
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  padding: 2%;
+}
+#partners .card {
+  border: 5px solid var(--primary-color);
+  width: 130px;
+  padding: 1%;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+#partners .card h3 {
+  height: inherit;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem !important;
+}
+#partners .card img {
+  width: 100%;
+  border-radius: 10px;
+}
+#partners .card .info {
+  width: 100%;
+  position: absolute;
+  bottom: -60%;
+  height: 60px;
+  background-color: var(--secondary-color);
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#partners .card:hover {
+  transform: scale(1.1);
+}
+#partners .card:hover .info {
+  bottom: 0%;
 }
 
 #sobre {
@@ -386,6 +451,7 @@ header nav ul li a {
   width: 100%;
 }
 #associations .text ul li {
+  width: 100%;
   display: flex;
   align-items: center;
   font-size: var(--mobile-txt);
@@ -513,7 +579,7 @@ header nav ul li a {
   flex-wrap: wrap;
 }
 #ONU .cards img {
-  width: 80px;
+  width: 130px;
 }
 
 .flex {
@@ -662,6 +728,12 @@ main #news .text {
   gap: var(--mobile-txt);
 }
 
+@media screen and (min-width: 375px) {
+  #partners .card {
+    width: 160px;
+    font-size: 1.6rem;
+  }
+}
 @media screen and (min-width: 425px) {
   #projects .filter {
     justify-content: start;
@@ -678,10 +750,13 @@ main #news .text {
   }
   #main,
   main {
-    padding-top: 234px;
+    padding-top: 200px;
   }
   main h1 {
     margin-top: 3%;
+  }
+  #ONU .cards img {
+    width: 100px;
   }
   #mobile-menu {
     display: none !important;
@@ -836,7 +911,7 @@ main #news .text {
     gap: 30px;
   }
   #associations .display .text ul p {
-    font-size: 20px;
+    font-size: 1.7rem;
   }
   #ONU .cards {
     justify-content: space-between;
@@ -884,6 +959,9 @@ main #news .text {
   #body-content {
     max-width: 1920px;
     margin: 0 auto;
+  }
+  #associations p {
+    font-size: 2.4rem !important;
   }
   footer .flex {
     max-width: 1920px;
